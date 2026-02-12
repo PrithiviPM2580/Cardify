@@ -145,7 +145,7 @@
     @apply bg-main-bg text-sm text-white h-15 cursor-grab rounded-md rounded-b-none p-2 font-semibold border-column-bg border-4 flex items-center justify-between;
   }
   .column-container-content {
-    @apply flex grow;
+    @apply flex grow flex-col gap-4 p-2 overflow-x-hidden overflow-y-auto;
   }
   .column-container-number {
     @apply flex justify-center items-center bg-column-bg px-2 py-1 text-sm rounded-full;
@@ -155,5 +155,14 @@
   }
   .column-container-btn:hover {
     background-color: transparent !important;
+  }
+  .column-container-input {
+    @apply bg-black focus:border-rose-500 border-2 rounded-sm outline-none px-2;
+  }
+  .column-container-footer-btn {
+    @apply flex gap-1.5 items-center border-2 rounded-sm p-4 border-x-main-bg hover:bg-main-bg hover:text-rose-500 active:bg-black;
+  }
+  .task-item {
+    @apply bg-main-bg p-2.5 h-16 min-h-16 items-center flex text-left rounded-xl hover:ring-2 hover:ring-inset hover:ring-rose-500 cursor-grab relative;
   }
 }
