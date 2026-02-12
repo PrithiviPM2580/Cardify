@@ -1,5 +1,7 @@
+import Cardify from "./components/Cardify";
+
 const App = () => {
-  return <div>App</div>;
+  return <Cardify />;
 };
 
 export default App;
