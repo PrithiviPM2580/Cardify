@@ -1,6 +1,12 @@
 export type Id = number | string;
 
 export type Column = {
-  id: number;
+  id: Id;
   title: string;
+};
+
+export type Task = {
+  id: Id;
+  columnId: Id;
+  content: string;
 };
