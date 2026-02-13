@@ -89,6 +89,11 @@ const Cardify = () => {
 
     setTasks([...tasks, newTask]);
   }
+
+  function deleteTask(id: Id) {
+    const filteredTasks = tasks.filter((task) => task.id !== id);
+    setTasks(filteredTasks);
+  }
   return (
     <div className="cardify-container">
       <DndContext
@@ -106,6 +111,7 @@ const Cardify = () => {
                   deleteColumn={deleteColumn}
                   updateColumn={updateColumn}
                   createTask={createTask}
+                  deleteTask={deleteTask}
                   tasks={tasks.filter((task) => task.columnId === column.id)}
                 />
               ))}
@@ -124,6 +130,7 @@ const Cardify = () => {
                 deleteColumn={deleteColumn}
                 updateColumn={updateColumn}
                 createTask={createTask}
+                deleteTask={deleteTask}
                 tasks={tasks.filter(
                   (task) => task.columnId === activeColumn.id,
                 )}
