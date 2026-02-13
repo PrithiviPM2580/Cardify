@@ -165,4 +165,7 @@
   .task-item {
     @apply bg-main-bg p-2.5 h-16 min-h-16 items-center flex text-left rounded-xl hover:ring-2 hover:ring-inset hover:ring-rose-500 cursor-grab relative;
   }
+  .text-area {
+    @apply h-[90%] w-full resize-none border-none rounded-sm bg-transparent text-white focus:outline-none;
+  }
 }
